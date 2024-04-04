@@ -19,5 +19,7 @@ Ruutu -- "3" Yhteismaa
     Pelaaja "2..8" -- "1" Monopolipeli
 Pelaaja -- Omistukset
 Pelaaja -- Raha
-Omistukset -- Tie, Asema, Laitos
+Omistukset -- Tie,
+Asema,
+Laitos
 ```
