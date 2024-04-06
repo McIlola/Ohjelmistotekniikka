@@ -7,5 +7,6 @@ class TestSudoku(unittest.TestCase):
     
     def test_pelin_luominen_toimii(self):
         peli = self.pelaa.puzzle_creator()
+        self.assertEqual(len(peli), 9)
         for i in peli:
             self.assertEqual(len(i), 9)
