@@ -14,3 +14,4 @@ Sovellus on sudoku peli, eli 9x9 ruudukko johon laitetaan numeroita oikeassa jä
 - Ajan laskeminen.
 - Ajan kirjaus.
 - Vaikeusasteet.
+- Muistiinpano.
