@@ -1,6 +1,6 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Sudokupeli
 
-**Mahdollisesti** *tekemässä sudoku pelin.* Ehkä jotain vaikeusasteita, ei varmaan **erillaisia** sudokuita. *Joko jonkinlainen koodi joka osaa tehdä sudoku pelin tai sitten jokin määrä valmiita joista valitaan kun aloitetaan.*
+*Yksinkertainen sudokupeli.* Ehkä jotain vaikeusasteita. Luo laudan ja pilottaa osan nuomeroista ennen pelin alkua.
 
 ## Dokumentaatio
 - [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
