@@ -1,6 +1,6 @@
 # Sudokupeli
 
-*Yksinkertainen sudokupeli.* Ehkä jotain vaikeusasteita. Luo laudan ja pilottaa osan nuomeroista ennen pelin alkua.
+Eli peli jossa tarkoitus täyttää 9x9 lauta numeroilla 1-9 sillä tavalla että jokainen vaaka- ja pystysuuntainen rivi sekä jokainen 3x3 ruutu sisältää numerot 1-9 sudokupeli. Aloittaessa luo satunnaisen laudan ja pilottaa osan nuomeroista ennen pelin alkua. Näitä numeroita voi sitten alkaa täytellä kunnes peli on läpäisty.
 
 ## Dokumentaatio
 - [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
