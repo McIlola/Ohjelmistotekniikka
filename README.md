@@ -63,3 +63,7 @@ Tiedoston [.pylintrc](./.pylintrc) määrittelemät tarkistukset voi suorittaa k
 ```
 poetry run invoke lint
 ```
+ja
+```
+poetry run invoke windows-lint
+```
