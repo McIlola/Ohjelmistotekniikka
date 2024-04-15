@@ -7,3 +7,4 @@
 ## Viikko 4
 - Numeroiden piilotus lisätty.
 - Numeroiden piilotukselle lisätty testi.
+- pylint lisäys
