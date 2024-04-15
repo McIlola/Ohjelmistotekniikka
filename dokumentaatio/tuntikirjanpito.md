@@ -7,4 +7,4 @@
 | 5.4.24 | 5    | puzzle_creator luominen |
 | 6.4.24 | 3    | puzzle_creator lisäämistä, testin luominen ja testauksen toiminnallisuutta|
 | 14.4.24 | 3    | number_hider luominen ja testi|
-| total | 16    | |
+| yht | 16    | |
