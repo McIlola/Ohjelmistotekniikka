@@ -55,7 +55,11 @@ tai
 ```
 poetry run invoke windows-coverage-report
 ```
-
-
 Raportti generoituu _htmlcov_-hakemistoon.
+### Pylint
 
+Tiedoston [.pylintrc](./.pylintrc) määrittelemät tarkistukset voi suorittaa komennolla:
+
+```
+poetry run invoke lint
+```
