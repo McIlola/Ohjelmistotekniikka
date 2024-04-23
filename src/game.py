@@ -33,7 +33,7 @@ class Game:
                 else:
                     pygame.draw.rect(self.display, (255,0,0), (i*self.cell_size,j*self.cell_size,i*self.cell_size+self.cell_size,j*self.cell_size+self.cell_size), 1)
                     number = self.font.render(str(self.game.given_puzzle[i][j]), True, (255,0,0))
-                    self.display.blit(number,(i*self.cell_size+18,j*self.cell_size+10)) 
+                    self.display.blit(number,(i*self.cell_size+18,j*self.cell_size+8)) 
         pygame.draw.rect(self.display, (255,255,255), self.rect, 2)     
         pygame.display.flip()
     
