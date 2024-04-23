@@ -9,4 +9,5 @@
 | 14.4.24 | 3    | toimminallisuutta, testausta ja pylint|
 | 14.4.24 | 3    | toimminallisuutta, testausta ja pylint|
 | 21.4.24 | 4    | Käyttöliittymä ja toiminnallisuutta|
-| yht | 20    | |
+| 23.4.24 | 5    | Käyttöliittymä, toiminnallisuutta ja dokumentaatiota|
+| yht | 25    | |
