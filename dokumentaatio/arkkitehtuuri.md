@@ -9,3 +9,11 @@
     - search_events}
 ```
 App luo pelilaudan ja pilottaa numerot. Game käyttää pelilautaa luodakseen pelin ja antaa käyttäjän pelata.
+
+## Sekvenssikaavio
+```mermaid
+sequenceDiagram
+        game ->> app: Sudoku()
+    activate app
+        app ->> game: given_puzzle
+    deactivate app
