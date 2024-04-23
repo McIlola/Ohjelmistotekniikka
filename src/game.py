@@ -54,25 +54,25 @@ class Game:
                     if event.key == pygame.K_LEFT and self.cell_x>0:
                         self.rect.move_ip(-self.cell_size, 0)
                         self.cell_x -= 1
-                    if event.key == pygame.K_1:
+                    if event.key == pygame.K_1 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 1
-                    if event.key == pygame.K_2:
+                    if event.key == pygame.K_2 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 2   
-                    if event.key == pygame.K_3:
+                    if event.key == pygame.K_3 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 3
-                    if event.key == pygame.K_4:
+                    if event.key == pygame.K_4 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 4
-                    if event.key == pygame.K_5:
+                    if event.key == pygame.K_5 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 5
-                    if event.key == pygame.K_6:
+                    if event.key == pygame.K_6 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 6
-                    if event.key == pygame.K_7:
+                    if event.key == pygame.K_7 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 7
-                    if event.key == pygame.K_8:
+                    if event.key == pygame.K_8 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 8
-                    if event.key == pygame.K_9:
+                    if event.key == pygame.K_9 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 9 
-                    if event.key == pygame.K_0:
+                    if event.key == pygame.K_0 and (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
                         self.game.given_puzzle[self.cell_x][self.cell_y] = 0 
 if __name__ == "__main__":
     Game()

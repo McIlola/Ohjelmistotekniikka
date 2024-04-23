@@ -47,4 +47,3 @@ if __name__ == "__main__":
     print("")
     for i in pelaa.given_puzzle:
         print(i)
-    print(pelaa.hiddennum)

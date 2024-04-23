@@ -3,16 +3,12 @@ from subprocess import call
 from sys import platform
 
 @task
-def foo(ctx):
-    print("bar")
-
-@task
 def windows_start(ctx):
-    ctx.run("python src/app.py", )
+    ctx.run("python src/game.py", )
 
 @task
 def start(ctx):
-    ctx.run("python3 src/app.py", pty=True)
+    ctx.run("python3 src/game.py", pty=True)
 
 @task
 def windows_test(ctx):
