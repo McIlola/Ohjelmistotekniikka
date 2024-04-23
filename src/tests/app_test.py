@@ -8,7 +8,6 @@ class TestSudoku(unittest.TestCase):
         self.pelaa = self.game.puzzle_creator()
 
     def test_pelin_luominen_toimii(self):
-        #peli = self.pelaa.puzzle_creator()
         self.assertEqual(len(self.pelaa), 9)
         for i in self.pelaa:
             self.assertEqual(len(i), 9)

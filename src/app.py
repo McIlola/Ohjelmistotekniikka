@@ -1,31 +1,30 @@
 from random import sample
-#import sys
-#import os
-#import pygame
+import copy
 
 class Sudoku:
     def __init__(self) -> None:
-        pass
+        self.base = 3
+        self.side = self.base * self.base
+        self.hiddennum = sample(range(self.side*self.side), 50)
+        self.solution = self.puzzle_creator()
+        self.given_puzzle = self.number_hider()
 
     def puzzle_creator(self):
-        base = 3
-        side = base*base
-
         def pattern(r, c):
-            return (base*(r % base)+r//base+c) % side
+            return (self.base*(r % self.base)+r//self.base+c) % self.side
 
         def shuffle(n):
             return sample(n, len(n))
-        rbase = range(base)
+        rbase = range(self.base)
         rows = []
         for i in shuffle(rbase):
             for r in shuffle(rbase):
-                rows.append(i*base+r)
+                rows.append(i*self.base+r)
         colums = []
         for i in shuffle(rbase):
             for c in shuffle(rbase):
-                colums.append(i*base+c)
-        nums = shuffle(range(1, base*base+1))
+                colums.append(i*self.base+c)
+        nums = shuffle(range(1, self.base*self.base+1))
         self.board = []
         for c in colums:
             row = []
@@ -35,17 +34,17 @@ class Sudoku:
         return self.board
 
     def number_hider(self):
-        side = 9
-        self.puzzle = self.board.copy()
-        for i in sample(range(side*side), 50):
+        self.puzzle = copy.deepcopy(self.board)
+        for i in self.hiddennum:
             self.puzzle[i//9][i % 9] = 0
         return self.puzzle
 
 
 if __name__ == "__main__":
     pelaa = Sudoku()
-    for i in pelaa.puzzle_creator():
+    for i in pelaa.solution:
         print(i)
     print("")
-    for i in pelaa.number_hider():
+    for i in pelaa.given_puzzle:
         print(i)
+    print(pelaa.hiddennum)
