@@ -11,3 +11,4 @@
 ## Viikko 5
 - Käyttöliittymän teko.
 - Toimiva sudoku.
+- Sovelluslogiikka kaavio.
