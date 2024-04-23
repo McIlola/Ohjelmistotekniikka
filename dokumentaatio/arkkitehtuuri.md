@@ -1,3 +1,4 @@
+## Sovelluslogiikka
 ```mermaid
  classDiagram
     class app{- puzzle_creator
@@ -7,3 +8,4 @@
     - draw_board
     - search_events}
 ```
+App luo pelilaudan ja pilottaa numerot. Game käyttää pelilautaa luodakseen pelin ja antaa käyttäjän pelata.
