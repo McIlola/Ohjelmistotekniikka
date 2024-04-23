@@ -7,4 +7,6 @@
 | 5.4.24 | 5    | puzzle_creator luominen |
 | 6.4.24 | 3    | puzzle_creator lisäämistä, testin luominen ja testauksen toiminnallisuutta|
 | 14.4.24 | 3    | toimminallisuutta, testausta ja pylint|
-| yht | 16    | |
+| 14.4.24 | 3    | toimminallisuutta, testausta ja pylint|
+| 21.4.24 | 4    | Käyttöliittymä ja toiminnallisuutta|
+| yht | 20    | |

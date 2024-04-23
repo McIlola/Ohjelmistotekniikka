@@ -7,4 +7,8 @@
 ## Viikko 4
 - Numeroiden piilotus lisätty.
 - Numeroiden piilotukselle lisätty testi.
-- pylint lisäys
+- pylint lisäys.
+## Viikko 5
+- Käyttöliittymän teko.
+- Toimiva sudoku.
+- Sovelluslogiikka kaavio.
