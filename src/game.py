@@ -46,11 +46,19 @@ class Game:
             for j in range(self.size):
                 if self.game.given_puzzle[i][j] == 0:
                     pygame.draw.rect(self.display, (255,0,0), (i*self.cell_size,j*self.cell_size,i*self.cell_size+self.cell_size,j*self.cell_size+self.cell_size), 1)                    
-                else:
+                elif self.game.given_puzzle[i][j] != 0 and (i*9+j) not in self.game.hiddennum:
                     pygame.draw.rect(self.display, (255,0,0), (i*self.cell_size,j*self.cell_size,i*self.cell_size+self.cell_size,j*self.cell_size+self.cell_size), 1)
                     number = self.font.render(str(self.game.given_puzzle[i][j]), True, (255,0,0))
+                    self.display.blit(number,(i*self.cell_size+18,j*self.cell_size+8))
+                else:
+                    pygame.draw.rect(self.display, (255,0,0), (i*self.cell_size,j*self.cell_size,i*self.cell_size+self.cell_size,j*self.cell_size+self.cell_size), 1)
+                    number = self.font.render(str(self.game.given_puzzle[i][j]), True, (255,255,255))
                     self.display.blit(number,(i*self.cell_size+18,j*self.cell_size+8)) 
-        pygame.draw.rect(self.display, (255,255,255), self.rect, 2)     
+        pygame.draw.rect(self.display, (255,255,255), self.rect, 2)
+        pygame.draw.line(self.display, (255,255,255), (3*self.cell_size, 0), (3*self.cell_size, self.size*self.cell_size), 3)
+        pygame.draw.line(self.display, (255,255,255), (6*self.cell_size, 0), (6*self.cell_size, self.size*self.cell_size), 3)
+        pygame.draw.line(self.display, (255,255,255), (0, 3*self.cell_size), (self.size*self.cell_size, 3*self.cell_size), 3)
+        pygame.draw.line(self.display, (255,255,255), (0, 6*self.cell_size), (self.size*self.cell_size, 6*self.cell_size), 3)
         pygame.display.flip()
     
     def search_events(self):
