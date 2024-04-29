@@ -12,3 +12,7 @@
 - Käyttöliittymän teko.
 - Toimiva sudoku.
 - Sovelluslogiikka kaavio.
+## Viikko 6
+- Pelin ulkonäköä paranettu.
+- Docstring lisätty.
+- Käyttöohje lisätty.
