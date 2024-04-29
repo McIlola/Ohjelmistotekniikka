@@ -14,6 +14,4 @@ App luo pelilaudan ja pilottaa numerot. Game käyttää pelilautaa luodakseen pe
 ```mermaid
 sequenceDiagram
         game ->> app: Sudoku()
-    activate app
-        app ->> game: given_puzzle
-    deactivate app
+    
