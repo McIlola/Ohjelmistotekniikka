@@ -4,7 +4,7 @@ import copy
 class Sudoku:
     """Luokka, joka luo pelilaudan ja pilottaa osan numeroista.
     """
-    def __init__(self) -> None:
+    def __init__(self, mode) -> None:
         """Luokan konstruktori, joka päättää laudan suuruden ja piilotettujen numeroiden määrän.
 
         Args:
@@ -14,7 +14,7 @@ class Sudoku:
         """
         self.base = 3
         self.side = self.base * self.base
-        self.hiddennum = sample(range(self.side*self.side), 50)
+        self.hiddennum = sample(range(self.side*self.side), mode)
         self.solution = self.puzzle_creator()
         self.given_puzzle = self.number_hider()
 
@@ -57,3 +57,7 @@ class Sudoku:
         for i in self.hiddennum:
             self.puzzle[i//9][i % 9] = 0
         return self.puzzle
+
+""" list = Sudoku()
+print(list.solution)
+print(list.given_puzzle) """
