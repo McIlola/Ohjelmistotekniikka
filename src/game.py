@@ -199,7 +199,7 @@ class Game:
                     if self.game.given_puzzle[i][j] != 0:
                         self.errors += 1
                     self.game.given_puzzle[i][j] = 0
-                    #correct = False
+                    correct = False
         if correct:
             self.record = (pygame.time.get_ticks()-self.start)//1000
             self.endscreen()
