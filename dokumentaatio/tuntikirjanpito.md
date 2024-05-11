@@ -13,4 +13,5 @@
 | 29.4.24 | 5    | Käyttöliittymä, docstring, dokumentaatiota ja koodikatselmointi|
 | 2.5.24 | 5    | Toiminnallisuutta|
 | 8.5.24 | 4    | Toiminnallisuutta ja dokumentaatiota|
-| yht | 30    | |
+| 11.5.24 | 2    | Viimeistelyä|
+| yht | 44    | |
