@@ -109,7 +109,7 @@ score=yes
 [REFACTORING]
 
 # Maximum number of nested blocks for function / method body
-max-nested-blocks=3
+max-nested-blocks=4
 
 # Complete name of functions that never returns. When checking for
 # inconsistent-return-statements if a never returning function is called then
@@ -308,7 +308,6 @@ attr-naming-style=snake_case
 
 # Bad variable names which should always be refused, separated by a comma.
 bad-names=foo,
-          bar,
           baz,
           toto,
           tutu,

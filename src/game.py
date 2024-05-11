@@ -1,6 +1,5 @@
 import sys
 import pygame
-import time
 from app import Sudoku
 
 class Game:
@@ -10,7 +9,6 @@ class Game:
         """Luokan konstruktori, joka antaa aloitusarvoja sekä aloittaa luokan toiminnan.
 
         Args:
-            game: luo pelilaudan kutsumalla app.py:n luokkaa.
             size: pelilaudan sivun suuruus.
             cell: yhden ruudun suuruus.
             bar: yläpalkin koko.
@@ -19,7 +17,8 @@ class Game:
             font: tekstissä käytettävä fontti.
             cell_x ja cell_y: selvittää missä pelaaja on näytöllä.
             rect: neliö joka näyttää misää pelaaja on näytöllä.
-            ready: aloittaa aloitusnäytön
+            ready: määrittää onko pelaaja valmis aloittamaan.
+            errors: määrä virheitä jota pelaajalla on.
             loop(): aloittaa while silmukan.
         """
         pygame.init()
@@ -37,7 +36,7 @@ class Game:
         self.loop()
 
     def loop(self):
-        """While silmukka joka kutsuu luokan piirto ja taphtuman etsintä metodeita.
+        """While silmukka joka kutsuu luokan aloitusnäytön ja sen jälkeen piirto ja tapahtuman etsintä metodeita.
         """
         while True:
             if not self.ready:
@@ -48,6 +47,12 @@ class Game:
     
     def start_screen(self):
         """Aloitusnäyttö, antaa mahdollisuuden valita vaikeusaste.
+
+        Args:
+        modebutton1 ja modebutton2: luo ruudun jota painamalla voi valita vaikeusasteen.
+        text1 ja text2: vaikeusasteiden tekstit. 
+        game: luo pelilaudan kutsumalla app.py:n luokkaa riippuen vaikeusasteesta.
+        start: pelin aloitusaika.
         """
         self.display.fill((0, 0, 0))
             
@@ -128,7 +133,7 @@ class Game:
         pygame.display.flip()
     
     def search_events(self):
-        """Käy läpi tapahtumia. Tässä vaiheessa pelistä poistumisen ja numeroiden ja nuolinäppäinten painallukset.
+        """Käy läpi tapahtumia. Pelistä poistumisen, numeroiden ja nuolinäppäinten painallukset ja laudan tarkastuksen.
         """
         for event in pygame.event.get():
             if event.type == pygame.QUIT: 
@@ -167,7 +172,6 @@ class Game:
                 if event.key == pygame.K_0 or event.key == pygame.K_KP0 and self.isprefill():
                     self.game.given_puzzle[self.cell_x][self.cell_y] = 0
                 if event.key == pygame.K_ESCAPE:
-                    self.end = time.time()
                     self.errorcheck()
     
     def timer(self):
@@ -184,13 +188,13 @@ class Game:
             True: Jos ruutun voidaan laittaa numero
             False: Etukäteen täytetty ja estää täyttämistä.
         """
-        if (self.cell_x * 9 + self.cell_y) in self.game.hiddennum:
+        if self.cell_x * 9 + self.cell_y in self.game.hiddennum:
             return True
         return False
     
     def errorcheck(self):
         """Tarkastaa jos vastaukset ovat oikein ja poistaa väärät.
-        Laskee myös virheiden määrän.
+        Laskee myös virheiden määrän, jos virheitä ei ole, niin lopettaa pelin.
         """
         correct = True
         for i in range(self.size):
@@ -205,6 +209,13 @@ class Game:
             self.endscreen()
 
     def endscreen(self):
+        """Luo lopetusnäytön jossa saa nähdä tuloksensa pelistä, sekä aloittaa uudelleen.
+
+        Args:
+        restartbutton: ruutu, jota painamalla voi aloittaa pelin uudelleen.
+        restarttext: napin päällä oleva teksti.
+        timetext ja errortext: kertovat ajan ja virheiden määrän.
+        """
         while True:
             self.display.fill((0, 0, 0))
 

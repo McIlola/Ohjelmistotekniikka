@@ -4,7 +4,7 @@ from app import Sudoku
 
 class TestSudoku(unittest.TestCase):
     def setUp(self):
-        self.game = Sudoku()
+        self.game = Sudoku(50)
         self.pelaa = self.game.puzzle_creator()
 
     def test_pelin_luominen_toimii(self):
