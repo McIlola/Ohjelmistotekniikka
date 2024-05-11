@@ -16,3 +16,10 @@
 - Pelin ulkonäköä paranettu.
 - Docstring lisätty.
 - Käyttöohje lisätty.
+## Viikko 7
+- Aloitusnäyttö lisätty.
+- Vaikeusasteita kaksi.
+- Ajastin lisätty.
+- Virheiden tarkastus ja virheiden määrä.
+- Lopetusnäyttö.
+- Numpad tuki.
