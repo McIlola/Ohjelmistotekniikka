@@ -56,28 +56,28 @@ class Game:
         """
         self.display.fill((0, 0, 0))
             
-        self.modebutton1 = pygame.Rect(self.display_size/2-75,50,150,50)
-        pygame.draw.rect(self.display,(255,255,255),self.modebutton1)
+        modebutton1 = pygame.Rect(self.display_size/2-75,50,150,50)
+        pygame.draw.rect(self.display,(255,255,255),modebutton1)
         
-        self.modebutton2 = pygame.Rect(self.display_size/2-75,150,150,50)
-        pygame.draw.rect(self.display,(255,255,255),self.modebutton2)
+        modebutton2 = pygame.Rect(self.display_size/2-75,150,150,50)
+        pygame.draw.rect(self.display,(255,255,255),modebutton2)
         
         text1=self.font.render("Easy mode",True,(0,0,0))
         self.display.blit(text1,
-                          (self.modebutton1.centerx-text1.get_width()/2,
-                           self.modebutton1.centery-text1.get_height()/2))
+                          (modebutton1.centerx-text1.get_width()/2,
+                           modebutton1.centery-text1.get_height()/2))
         text2=self.font.render("Hard mode",True,(0,0,0))
         self.display.blit(text2,
-                          (self.modebutton2.centerx-text2.get_width()/2,
-                           self.modebutton2.centery-text2.get_height()/2))
+                          (modebutton2.centerx-text2.get_width()/2,
+                           modebutton2.centery-text2.get_height()/2))
         
         for event in pygame.event.get():
             if event.type == pygame.MOUSEBUTTONDOWN:
-                if pygame.Rect.collidepoint(self.modebutton1,event.pos):
+                if pygame.Rect.collidepoint(modebutton1,event.pos):
                     self.game = Sudoku(30)
                     self.ready = True
                     self.start = pygame.time.get_ticks()
-                if pygame.Rect.collidepoint(self.modebutton2,event.pos):
+                if pygame.Rect.collidepoint(modebutton2,event.pos):
                     self.game = Sudoku(50)
                     self.ready = True
                     self.start = pygame.time.get_ticks()          
@@ -195,6 +195,9 @@ class Game:
     def errorcheck(self):
         """Tarkastaa jos vastaukset ovat oikein ja poistaa väärät.
         Laskee myös virheiden määrän, jos virheitä ei ole, niin lopettaa pelin.
+
+        Args:
+        record: ottaa ylös pelaajan lopullisen ajan.
         """
         correct = True
         for i in range(self.size):
@@ -206,9 +209,9 @@ class Game:
                     correct = False
         if correct:
             self.record = (pygame.time.get_ticks()-self.start)//1000
-            self.endscreen()
+            self.end_screen()
 
-    def endscreen(self):
+    def end_screen(self):
         """Luo lopetusnäytön jossa saa nähdä tuloksensa pelistä, sekä aloittaa uudelleen.
 
         Args:
@@ -219,13 +222,13 @@ class Game:
         while True:
             self.display.fill((0, 0, 0))
 
-            self.restartbutton = pygame.Rect(self.display_size/2-75,self.display_size,150,50)
-            pygame.draw.rect(self.display,(255,255,255),self.restartbutton)
+            restartbutton = pygame.Rect(self.display_size/2-75,self.display_size,150,50)
+            pygame.draw.rect(self.display,(255,255,255),restartbutton)
 
             restarttext = self.font.render("Restart",True,(0,0,0))
             self.display.blit(restarttext,
-                              (self.modebutton1.centerx-restarttext.get_width()/2,
-                               self.restartbutton.centery-restarttext.get_height()/2))
+                              (self.display_size/2-restarttext.get_width()/2,
+                               restartbutton.centery-restarttext.get_height()/2))
 
             timetext = self.font.render(f"Your time was: {self.record} s",True,(255,255,255))
             self.display.blit(timetext,
@@ -237,7 +240,7 @@ class Game:
 
             for event in pygame.event.get():
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    if pygame.Rect.collidepoint(self.restartbutton,event.pos):
+                    if pygame.Rect.collidepoint(restartbutton,event.pos):
                         Game()     
                 if event.type == pygame.QUIT: 
                     sys.exit() 
