@@ -3,3 +3,4 @@ Ohjelmaa on testattu sekä automatisoiduin yksikkö- ja integraatiotestein unitt
 
 ## Testikattavuus
 Projektin testikattavuus on 18% sillä game.py testejä ei ole olemassa.
+![](./kuvat/coverage_report.png)
