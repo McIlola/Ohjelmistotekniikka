@@ -9,9 +9,9 @@ Sovellus on sudoku peli, eli 9x9 ruudukko johon laitetaan numeroita oikeassa jä
 - Ruudun valitseminen ja siihen numeron lisääminen."tehty"
 
 ## Jatkokehitysideoita
-- Virheiden lasku.
+- Virheiden lasku."tehty"
 - Numeron tarkastaminen, siis jos se on oikein."tehty"
 - Ajan laskeminen."tehty"
-- Ajan kirjaus.
+- Ajan kirjaus."tehty"
 - Vaikeusasteet."tehty"
 - Muistiinpano.
