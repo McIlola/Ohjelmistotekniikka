@@ -13,5 +13,8 @@ App luo pelilaudan ja pilottaa numerot. Game käyttää pelilautaa luodakseen pe
 ## Sekvenssikaavio
 ```mermaid
 sequenceDiagram
-        game ->> app: Sudoku()
+        game ->> app: Sudoku(mode)
+```
+## Sekvenssikaavio game:in toiminnasta.
+```merrmaid
     
